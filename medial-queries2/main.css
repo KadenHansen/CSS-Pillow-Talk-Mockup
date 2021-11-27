@@ -1,3 +1,69 @@
 body {
   background: papayawhip;
 }
+
+*:not(.icons) {
+  border: 1px solid black;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  text-align: center;
+  height: 100vh;
+  font-size: 2em;
+}
+
+.cards {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  min-width: 90%;
+  margin: 0.5em;
+  flex-grow: 1;
+}
+
+.a, .f {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-width: 90%;
+  flex-grow: 1;
+  margin: 0.5em;
+}
+
+.b {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-width: 90%;
+  flex-grow: 5;
+  margin: 0.5em;
+}
+
+.c, .d, .e {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-width: 30%;
+}
+
+@media (min-width: 600px) {
+
+    .container {
+    /* flex-direction: row; */
+    flex-wrap: wrap;
+  }
+
+  .a, .f {
+    min-width: 90%;
+    /* flex-grow: 1; */
+  }
+
+  .b {
+    min-width: none;
+    max-width: 50%;
+    /* flex-grow: 5; */
+  }
+}
