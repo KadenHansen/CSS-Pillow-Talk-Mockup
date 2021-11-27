@@ -2,7 +2,7 @@ body {
   background: papayawhip;
 }
 
-*:not(.icons) {
+*:not(.cards, .left-display) {
   border: 1px solid black;
 }
 
@@ -13,6 +13,13 @@ body {
   text-align: center;
   height: 100vh;
   font-size: 2em;
+}
+
+.left-display {
+  display: flex;
+  flex-direction: column;
+  flex-grow: 5;
+
 }
 
 .cards {
@@ -28,7 +35,7 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
-  min-width: 90%;
+  width: 92.5%;
   flex-grow: 1;
   margin: 0.5em;
 }
@@ -42,28 +49,43 @@ body {
   margin: 0.5em;
 }
 
-.c, .d, .e {
+.cards > div {
   display: flex;
   justify-content: center;
   align-items: center;
-  min-width: 30%;
+  width: 30%;
 }
 
 @media (min-width: 600px) {
 
-    .container {
-    /* flex-direction: row; */
+  .container {
+    flex-direction: row;
     flex-wrap: wrap;
+  }
+
+  /* .cards {
+    min-width: 10%;
+    max-width: 70%;
   }
 
   .a, .f {
     min-width: 90%;
-    /* flex-grow: 1; */
+    flex-grow: 1;
   }
 
   .b {
-    min-width: none;
-    max-width: 50%;
-    /* flex-grow: 5; */
+    min-width: 10%;
+    max-width: 70%;
+    flex-grow: 5;
+  } */
+
+  .left-display {
+    max-width: 80%;
+    min-width: 60%;
+  }
+
+  .f {
+    min-width: 20%;
+    max-width: 20%;
   }
 }
